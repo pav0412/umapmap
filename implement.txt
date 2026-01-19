@@ -1,0 +1,44 @@
+
+Number Theory feature engineering 
+  feature engineering to distinguish different numbers 
+
+All helper funcs :
+  isprime
+  first k primes 
+  disctinct factors 
+  all factors 
+  fast modulo 
+  fast log divisor 
+  euler totient 
+  all relative primes 
+  all twin primes 
+  vectorize 
+
+Encoding 1: Prime Factorization 
+  In : K, N 
+  for n in range N
+      n = prime factorization w/ powers for all k in K 
+      vec = all prime factors listed out as many times as powers 
+      pass vec to umap 
+
+Encoding 1.5: Disctinct Factors 
+  In : K, N 
+
+  for n in range N
+      n = prime factorization w/o powers for all k in K 
+      vec = all prime factors listed out without all powers 
+      pass vec to umap 
+
+Encoding 2: Residues 
+  In: K, N 
+  for n in range N:
+      for k in range K:
+        vec.append(n mod k)
+
+Encoding 3: Number Properties 
+  In: N 
+  for n in range N:
+    vec = [log(n), div_count(n), sumofdiv(n), eulertotient(n), totalprimefactors(n) #counts repeats, distinctprimefactors(n)]
+
+is maps or arrays better ? stick with arrays for now because numpy + numbajit 
+
